@@ -66,3 +66,10 @@ pub fn decor_output_amper(output: ReturnType, on_dupl: DuplAction) -> ReturnType
         _ => output,
     }
 }
+
+#[cfg(feature="throw")]
+pub const DUPL_ACTION:DuplAction = DuplAction::Throw;
+#[cfg(feature="prepend")]
+pub const DUPL_ACTION:DuplAction = DuplAction::Prepend;
+#[cfg(feature="carry")]
+pub const DUPL_ACTION:DuplAction = DuplAction::Carry;

@@ -5,7 +5,7 @@ use syn::{
     MetaNameValue, Signature,
 };
 
-use crate::utils::{decor_output_amper, mut_receiver, split_comma_parse_stream, DuplAction};
+use crate::utils::{decor_output_amper, mut_receiver, split_comma_parse_stream, DUPL_ACTION};
 
 struct CacheArgs {
     field: Option<String>,
@@ -119,7 +119,7 @@ fn gen_signature(mut sig: Signature, borrow: bool) -> Signature {
     sig.inputs = mut_receiver(sig.inputs, true);
 
     if borrow {
-        sig.output = decor_output_amper(sig.output, DuplAction::Throw);
+        sig.output = decor_output_amper(sig.output, DUPL_ACTION);
     }
 
     sig
@@ -134,7 +134,7 @@ pub fn cached_field_impl(args: TokenStream, item: TokenStream) -> TokenStream {
     );
 
     let vis = function.vis.clone();
-    let mut signature = gen_signature(function.sig.clone(), cache_args.borrow);
+    let signature = gen_signature(function.sig.clone(), cache_args.borrow);
     let closure_ident = gen_compute_ident(&function);
     let closure = gen_compute_closure(function);
 

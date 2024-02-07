@@ -2,6 +2,19 @@
 name = "cached_field"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "Proc macro to cache associate function result on strut field. An analogy to python's @cached_property class decorator."
+repository = "https://github.com/RobbieL-nlp/cached_field"
+readme = "README.md"
+license-file = "LICENSE.txt"
+keywords = ["cache", "field", "macro", "property", "proc"]
+categories = ["caching", "rust-patterns"]
+
+[features]
+throw=[]
+carry=[]
+prepend=[]
+default=["throw"]
 
 [lib]
 proc-macro = true
