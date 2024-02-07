@@ -1,0 +1,21 @@
+on:
+  release:
+    branches:
+      - main
+
+name: publish-crate
+
+jobs:
+  publish-crate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: publish to crate.io
+        run: cargo publish --verbose --locked --token ${{ secrets.CARGO_GITHUB_API }}
+    
