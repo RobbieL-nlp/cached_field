@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/RobbieL-nlp/cached_field/compare/v0.1.0...v1.0.0) (2024-02-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* auto publish
+
+### Features
+
+* auto publish ([86d685b](https://github.com/RobbieL-nlp/cached_field/commit/86d685b6843777fbd6f3e876c72954896a2c3e0f))
+
 ## 0.1.0 (2024-02-07)
 
 

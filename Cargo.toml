@@ -1,6 +1,6 @@
 [package]
 name = "cached_field"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
 license = "MIT"
 description = "Proc macro to cache associate function result on strut field. An analogy to python's @cached_property class decorator."
