@@ -1,8 +1,9 @@
 on:
+  workflow_dispatch:
   release:
     branches:
       - main
-
+      
 name: publish-crate
 
 jobs:
