@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/RobbieL-nlp/cached_field/compare/v1.0.1...v1.0.2) (2024-02-07)
+
+
+### Bug Fixes
+
+* version ([a769f5e](https://github.com/RobbieL-nlp/cached_field/commit/a769f5e2eb9f8dd4fabde53ccd8b7d3917b4f1c1))
+
 ## [1.0.1](https://github.com/RobbieL-nlp/cached_field/compare/v1.0.0...v1.0.1) (2024-02-07)
 
 
